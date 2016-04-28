@@ -1,0 +1,8 @@
+#! /usr/bin/python
+
+import os
+
+if not os.path.exists("/var/data/watershed-location-service"):
+   os.system("mkdir -p /var/data/watershed-location-service")
+
+os.system("aws s3 cp s3://data.fernleafinteractive.com/watersheds/data.json /var/data/watershed-location-service")
